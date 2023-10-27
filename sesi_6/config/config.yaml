@@ -1,0 +1,10 @@
+
+app: 
+  port: ":4000"
+
+db:
+  host: "localhost"
+  port: "5433"
+  user: "postgres"
+  password: "example"
+  name: "noobeeid"
