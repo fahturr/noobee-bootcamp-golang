@@ -1,0 +1,7 @@
+app:
+  port: 5555
+mail:  
+  host: smtp.gmail.com
+  port: 587
+  email: 
+  password:
