@@ -23,11 +23,10 @@ func main() {
 		log.Println("error when try to LoadConfig with error :", err.Error())
 	}
 
-	router := fiber.New()
+	app := fiber.New()
 
-	router.Post("/send", sendEmail)
-
-	router.Listen(config.Cfg.App.Port)
+	app.Post("/send", sendEmail)
+	app.Listen(config.Cfg.App.Port)
 }
 
 func sendEmail(c *fiber.Ctx) error {

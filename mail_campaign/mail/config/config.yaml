@@ -1,7 +1,7 @@
 app:
-  port: 5555
+  port: :5555
 mail:  
   host: smtp.gmail.com
   port: 587
-  email: fahtur.rf@gmail.com
-  password: gpnamlusjkafwrua
+  email: 
+  password: 
