@@ -58,17 +58,14 @@ func sendEmail(c *fiber.Ctx) error {
 }
 
 func sendMailGoMail(req SendEmailRequest) (err error) {
-	// setup gomail message
 	mailer := gomail.NewMessage()
-	// setting header from
+
+	// Set Header
 	mailer.SetHeader("From", req.From)
-	// setting header to
 	mailer.SetHeader("To", req.To...)
 
-	// setting subject
+	// Set Content
 	mailer.SetHeader("Subject", req.Subject)
-	// setting body
-	// kali ini, kita akan menggunakan body HTML agar tampilan dari emailnya lebih menarik
 	mailer.SetBody("text/html", req.Message)
 
 	dialer := gomail.NewDialer(
